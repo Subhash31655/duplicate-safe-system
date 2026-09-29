@@ -1,0 +1,447 @@
+
+/* General page styling */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f4f7fc;
+  color: #14213d;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+/* Main page */
+.auth-page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding: 30px 6%;
+}
+
+/* Header */
+.auth-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  color: #14213d;
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.brand-icon {
+  color: #1677ed;
+  font-size: 38px;
+}
+
+.brand-blue {
+  color: #1677ed;
+}
+
+.header-link {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: #64748b;
+  font-size: 15px;
+}
+
+.text-button {
+  border: none;
+  background: transparent;
+  color: #0866d8;
+  font-weight: 600;
+}
+
+.text-button:hover {
+  color: #004bb5;
+  text-decoration: underline;
+}
+
+/* Centered login card */
+.auth-main {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 0;
+}
+
+.auth-card {
+  width: 100%;
+  max-width: 560px;
+  background: #ffffff;
+  padding: 48px;
+  border-radius: 18px;
+  box-shadow: 0 12px 45px rgba(20, 50, 90, 0.08);
+}
+
+/* Heading */
+.auth-heading {
+  text-align: center;
+  margin-bottom: 36px;
+}
+
+.auth-heading h1 {
+  font-size: 34px;
+  margin-bottom: 12px;
+}
+
+.auth-heading p {
+  color: #718096;
+  font-size: 16px;
+}
+
+/* Form */
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.form-group label {
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.form-group input {
+  width: 100%;
+  height: 54px;
+  padding: 0 16px;
+  border: 1px solid #d6dfeb;
+  border-radius: 9px;
+  outline: none;
+  background: #ffffff;
+  color: #14213d;
+  transition: border 0.2s, box-shadow 0.2s;
+}
+
+.form-group input::placeholder {
+  color: #94a3b8;
+}
+
+.form-group input:focus {
+  border-color: #1677ed;
+  box-shadow: 0 0 0 3px rgba(22, 119, 237, 0.12);
+}
+
+/* Password field */
+.password-field {
+  position: relative;
+}
+
+.password-field input {
+  padding-right: 75px;
+}
+
+.password-toggle {
+  position: absolute;
+  right: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  border: none;
+  background: transparent;
+  color: #1677ed;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+/* Remember me and forgot password */
+.form-options {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  font-size: 14px;
+}
+
+.remember-me {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #475569;
+}
+
+.remember-me input {
+  width: 16px;
+  height: 16px;
+  accent-color: #1677ed;
+}
+
+/* Main button */
+.submit-button {
+  width: 100%;
+  height: 54px;
+  border: none;
+  border-radius: 9px;
+  background: #1677ed;
+  color: #ffffff;
+  font-size: 17px;
+  font-weight: 600;
+  transition: background 0.2s, transform 0.2s;
+}
+
+.submit-button:hover {
+  background: #075fc7;
+  transform: translateY(-1px);
+}
+
+/* Divider */
+.divider {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin: 28px 0 22px;
+}
+
+.divider span {
+  flex: 1;
+  height: 1px;
+  background: #dce4ef;
+}
+
+.divider p {
+  color: #718096;
+  font-size: 14px;
+  white-space: nowrap;
+}
+
+/* Social login buttons */
+.social-buttons {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+
+.social-buttons button {
+  min-height: 48px;
+  border: 1px solid #d6dfeb;
+  border-radius: 9px;
+  background: #ffffff;
+  color: #26364d;
+  font-weight: 500;
+  transition: background 0.2s;
+}
+
+.social-buttons button:hover {
+  background: #f1f6fd;
+}
+
+/* Security message */
+.security-note {
+  margin-top: 38px;
+  text-align: center;
+  color: #718096;
+  font-size: 14px;
+}
+
+/* Footer */
+.auth-footer {
+  text-align: center;
+  padding: 15px 0;
+  color: #8190a5;
+  font-size: 13px;
+}
+
+/* Mobile responsive design */
+@media (max-width: 600px) {
+  .auth-page {
+    padding: 22px 5%;
+  }
+
+  .auth-header {
+    flex-wrap: wrap;
+  }
+
+  .brand {
+    font-size: 23px;
+  }
+
+  .header-link {
+    font-size: 13px;
+  }
+
+  .auth-card {
+    padding: 30px 22px;
+  }
+
+  .auth-heading h1 {
+    font-size: 28px;
+  }
+
+  .social-buttons {
+    grid-template-columns: 1fr;
+  }
+
+  .form-options {
+    flex-wrap: wrap;
+  }
+}
+/* ---------- Safe Data Merge ---------- */
+
+.validation-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 22px;
+}
+
+.validation-item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 16px;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+}
+
+.validation-check {
+  width: 32px;
+  height: 32px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: #dcfce7;
+  color: #15803d;
+  font-weight: bold;
+}
+
+.validation-item > div:nth-child(2) {
+  flex: 1;
+}
+
+.validation-item strong {
+  display: block;
+  margin-bottom: 4px;
+}
+
+.validation-item p {
+  color: #64748b;
+  font-size: 13px;
+}
+
+.validation-status {
+  color: #15803d;
+  background: #dcfce7;
+  padding: 6px 11px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.merge-preview-card {
+  margin-top: 24px;
+}
+
+.merge-preview-card td:last-child {
+  color: #15803d;
+}
+
+.merge-success {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-top: 24px;
+  padding: 20px;
+  border-radius: 12px;
+  background: #f0fdf4;
+  border: 1px solid #bbf7d0;
+}
+
+.merge-success-icon {
+  width: 42px;
+  height: 42px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: #dcfce7;
+  color: #15803d;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.merge-success h3 {
+  color: #166534;
+  margin-bottom: 5px;
+}
+
+.merge-success p {
+  color: #4b5563;
+  font-size: 14px;
+}
+
+.merge-action-section {
+  text-align: right;
+  margin-top: 24px;
+}
+
+.perform-merge-button,
+.view-results-button {
+  border: none;
+  border-radius: 8px;
+  padding: 12px 20px;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.perform-merge-button {
+  background: #15803d;
+}
+
+.perform-merge-button:hover {
+  background: #166534;
+}
+
+.view-results-button {
+  background: #2563eb;
+}
+
+.view-results-button:hover {
+  background: #1d4ed8;
+}
+
+.merge-action-section p {
+  margin-top: 8px;
+  color: #64748b;
+  font-size: 13px;
+}
+
+@media (max-width: 700px) {
+  .validation-item {
+    align-items: flex-start;
+  }
+
+  .validation-status {
+    display: none;
+  }
+
+  .merge-success {
+    align-items: flex-start;
+  }
+}
